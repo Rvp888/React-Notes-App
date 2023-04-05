@@ -33,7 +33,7 @@ export default function Note(props) {
       <textarea className='note_text' defaultValue={props.note.text} placeholder='Write here...' />
       <div className='note_footer'>
         <p>{formatTime(props.note.time)}</p>
-        <img src={deleteIcon} alt='DELETE' onClick={() => props.deleteNote(props.note.id)} />
+        <img src={deleteIcon} alt='DELETE' onClick={() => props.deleteNote(props.note.id)} title='Delete Note' />
       </div>
     </div>
   )
