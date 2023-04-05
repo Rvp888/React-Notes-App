@@ -14,7 +14,7 @@ export default function SideBar(props) {
 
   return (
     <div className="sidebar">
-      <img src={plusIcon} alt="Add" className='plus-icon' onClick={() => setListOpen(!listOpen)} title='Create new note' />
+      <img src={plusIcon} alt="Add" className='plus-icon' onClick={() => setListOpen(!listOpen)} title='Create new Note' />
       <ul className={`sidebar_list ${listOpen ? 'sidebar_list_active' : ''}`}>
         {colors.map((color, index) => (
           <li
@@ -22,6 +22,7 @@ export default function SideBar(props) {
             key={index}
             style={{ backgroundColor: color }}
             onClick={() => props.addNote(color)}
+            title='Select Note colour'
           />
         ))}
       </ul>
