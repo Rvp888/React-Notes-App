@@ -24,6 +24,16 @@ function App() {
     setNotes([...tempNotes]);
   }
 
+  const updateText = (text, id) {
+    let tempNotes = [...notes];
+    tempNotes.forEach(note => {
+      if(note.id === id){
+        note.text = text;
+      }
+    });
+    setNotes([...tempNotes]);
+  }
+
   const deleteNote = (id) => {
     let tempNotes = [...notes];
     tempNotes = tempNotes.filter(note => note.id !== id);
@@ -34,7 +44,7 @@ function App() {
   return (
     <div className="App">
       <SideBar addNote={addNote} />
-      <NoteContainer notes={notes} deleteNote={deleteNote} />
+      <NoteContainer notes={notes} updateText={updateText} deleteNote={deleteNote} />
     </div>
   );
 }

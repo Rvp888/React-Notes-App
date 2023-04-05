@@ -23,7 +23,7 @@ export default function NoteContainer(props) {
             <div className='note-container_notes custom-scroll'>
                 {
                     notes?.length > 0 ? notes.map((note, index) => (
-                        <Note key={note.id} index={index} note={note} deleteNote={props.deleteNote} />
+                        <Note key={note.id} index={index} note={note} updateText={props.updateText} deleteNote={props.deleteNote} />
                         )) : <h3>No notes present</h3>
                 }
             </div>
