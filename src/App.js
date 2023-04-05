@@ -24,7 +24,7 @@ function App() {
     setNotes([...tempNotes]);
   }
 
-  const updateText = (text, id) {
+  const updateText = (text, id) => {
     let tempNotes = [...notes];
     tempNotes.forEach(note => {
       if(note.id === id){
