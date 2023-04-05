@@ -8,7 +8,7 @@
 }
 
 .note-container_notes {
-    height: 100%;
+    height: 99%;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
