@@ -43,8 +43,11 @@ function App() {
 
   return (
     <div className="App">
-      <SideBar addNote={addNote} />
-      <NoteContainer notes={notes} updateText={updateText} deleteNote={deleteNote} />
+      <h1 className="App_title" >Notes App</h1>
+      <div className="App_cont" >
+        <SideBar addNote={addNote} />
+        <NoteContainer notes={notes} updateText={updateText} deleteNote={deleteNote} />
+      </div>
     </div>
   );
 }

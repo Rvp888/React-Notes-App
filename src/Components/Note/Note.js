@@ -27,10 +27,16 @@ export default function Note(props) {
 
   }
 
+  function handleText(text, id) {
+    setTimeout(() => {              // Debounce effect
+      props.updateText(text, id);
+    },1000);
+  }
+
 
   return (
     <div className='note' style={{backgroundColor: props.note.color}} >
-      <textarea className='note_text' defaultValue={props.note.text} onChange={(e) => props.updateText(e.target.value, props.note.id)} placeholder='Write here...' />
+      <textarea className='note_text' defaultValue={props.note.text} onChange={(e) => handleText(e.target.value, props.note.id)} placeholder='Write here...' />
       <div className='note_footer'>
         <p>{formatTime(props.note.time)}</p>
         <img src={deleteIcon} alt='DELETE' onClick={() => props.deleteNote(props.note.id)} title='Delete Note' />

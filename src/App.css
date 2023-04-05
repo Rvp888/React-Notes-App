@@ -1,6 +1,14 @@
 
 .App {
   height: 100vh;
+}
+
+.App_title {
+
+}
+
+.App_cont {
+  height: 90%;
   display: flex;
   gap: 20px;
   padding: 40px;
